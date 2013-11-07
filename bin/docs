@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var docs = require('../index');
+var rimraf = require('rimraf');
+var path = require('path');
+
+var source = path.join(__dirname, '/../markdown');
+var dest = path.join(__dirname, '/../markup');
+var wrappers = path.join(__dirname, '/../wrappers');
+
+rimraf(dest + '/*', function(err) {
+  if (err) {
+    console.log(err);
+    process.exit(1);
+  }
+});
+
+docs({
+  source: source,
+  dest: dest,
+  wrappers: wrappers
+});
+

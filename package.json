@@ -1,0 +1,22 @@
+{
+  "name": "derby-docs",
+  "version": "0.1.0",
+  "description": "ultra simple markdown docs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test --bail --colors --reporter spec --debug"
+  },
+  "bin": "./bin/docs",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "~0.2.10",
+    "findit": "~1.1.0",
+    "highlight.js": "~7.4.0"
+  },
+  "devDependencies": {
+    "rimraf": "~2.2.2",
+    "hashd": "~1.0.0",
+    "better-assert": "~1.0.0"
+  }
+}

@@ -1,0 +1,62 @@
+body, a, a.visited {
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.primary {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+a.secondary {
+  font-size: 12px;
+}
+
+header {
+  padding: 50px;
+  height: 100px;
+  background: #F7F1E0;
+}
+
+header figure {
+  display: inline-block;
+  background-repeat: no-repeat;
+  border-radius: 99em; 
+  border: 4px solid #E74951;
+  float: left;
+  margin-right: 20px;
+}
+
+header figure img {
+  width: 100px;
+  height: 100px;
+  border-radius: 99em; 
+}
+
+header h1 {
+  font-size: 40px;
+  color: #E74951;
+}
+
+nav {
+  float: right;
+  margin: 50px;
+  width: 200px;
+}
+
+section[role="main"] {
+  padding: 50px;
+  margin-right: 250px;
+}
+
+footer {
+  padding: 50px;
+}
+

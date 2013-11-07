@@ -1,0 +1,42 @@
+<body>
+  <head>
+    <link href="../assets/css/pure.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/index.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <header>
+    <figure>
+      <img src="../assets/img/brand.png" alt="horsejs">
+    </figure>
+    <h1>DERBY</h1>
+  </header>
+
+
+<h1 id="introduction">INTRODUCTION</h1>
+<p>Derby includes a powerful data synchronization engine called Racer. While it works differently, Racer is to Derby somewhat like ActiveRecord is to Rails. Racer automatically syncs data between browsers, servers, and a database. Models subscribe to changes on specific objects and queries, enabling granular control of data propagation without defining channels. Racer supports conflict resolution out of the box, which greatly simplifies writing multi-user applications.</p>
+<p>On top of Racer, Derby provides powerful templating, data binding, and routing features. Every feature of Racer and Derby is written with server and client rendering in mind. Derby makes it simple to write applications that load as fast as a search engine, are as interactive as a document editor, and work offline.</p>
+<h2 id="features">Features</h2>
+<p>Realtime collaboration: Powered by ShareJS’s operational transformation of JSON and text, all conflicting data changes are automatically resolved. By default, every text input is a collaborative text editor, and every bit of data in the model can be collaboratively edited in realtime or offline.</p>
+<p>Client and server routing: The same routes produce a single-page browser app and an Express server app. Links render instantly with push/pop state changes in modern browsers, while server rendering provides access to search engines and browsers without JavaScript.</p>
+<p>HTML templates: Handlebars-like templates are rendered into HTML on both the server and client. Because they render on the server, pages display immediately—even before any scripts are downloaded. Templates are mostly just HTML, so designers can understand and modify them.</p>
+<p>View bindings: In addition to HTML rendering, templates specify live bindings between the view and model. When model data change, the view updates the properties, text, or HTML necessary to reflect the new data. When users interact with the page—such as editing the value of a text input—the model data update.</p>
+<h2 id="why-not-use-rails-and-backbone-">Why not use Rails and Backbone?</h2>
+<p>Derby represents a new breed of application frameworks, which we believe will replace currently popular libraries like Rails and Backbone.</p>
+<p>Adding dynamic features to apps written with Rails, Django, and other server-side frameworks tends to produce a tangled mess. Server code renders various initial states while jQuery selectors and callbacks desperately attempt to make sense of the DOM and user events. Adding new features typically involves changing both server and client code, often in different languages.</p>
+<p>Many developers now include a client MVC framework like Backbone to better structure client code. A few have started to use declarative model-view binding libraries, such as Knockout and Angular, to reduce boilerplate DOM manipulation and event bindings. These are great concepts, and adding some structure certainly improves client code. However, they still lead to duplicating rendering code and manually synchronizing changes in increasingly complex server and client code bases. Not only that, each of these pieces must be manually wired together and packaged for the client.</p>
+<p>Derby radically simplifies this process of adding dynamic interactions. It runs the same code in servers and browsers, and it syncs data automatically. Derby takes care of template rendering, packaging, and model-view bindings out of the box. Since all features are designed to work together, no code duplication and glue code are needed. Derby equips developers for a future when all data in all apps are realtime.</p>
+<h2 id="flexibility-without-the-glue-code">Flexibility without the glue code</h2>
+<p>Derby eliminates the tedium of wiring together a server, server templating engine, CSS compiler, script packager, minifier, client MVC framework, client JavaScript library, client templating and/or bindings engine, client history library, realtime transport, ORM, and database. It eliminates the complexity of keeping state synchronized among models and views, clients and servers, multiple windows, multiple users, and models and databases.</p>
+<p>At the same time, it plays well with others. Derby follows the conventions of Node.js, and it is built on top of popular libraries, including Express, Browserify, Google’s BrowserChannel, Stylus, LESS, UglifyJS, Redis, MongoDB, and soon other popular socket libraries and databases. The model engine Racer as well as the underlying data syncing module ShareJS and the underlying can be used separately. Other client libraries, such as jQuery, and any Node.js module from npm work just as well along with Derby.</p>
+<p>When following the default file structure, templates, styles, and scripts are automatically packaged and included in the appropriate pages.</p>
+<h2 id="performance">Performance</h2>
+<p>Derby is architected with speed in mind.</p>
+<p>Client-only application frameworks have dramatically slower page loads. Even an extremely optimized client-only renderer causes the browser to wait for the page to load a script (most likely via an additional request), interpret the script, render the template, and update the DOM before it has a chance to start performing layout of the HTML content.</p>
+<p>Derby’s architecture optimizes time to load the page initially, to re-render sections or the entire page client-side, and to update individual elements in realtime.</p>
+
+
+    <footer>
+      
+    </footer>
+
+  </body>
+</html>
